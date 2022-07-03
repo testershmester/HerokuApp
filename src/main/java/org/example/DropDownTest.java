@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class DropDownTest extends BaseTest {
-
     @Test
     public void dropDownTest() {
         driver.findElement(By.linkText("Dropdown")).click();

@@ -13,5 +13,8 @@ public class FramesTest extends BaseTest {
         driver.switchTo().frame("mce_0_ifr");
         String text = driver.findElement(By.id("tinymce")).findElement(By.cssSelector("p")).getText();
         assertEquals(text, "Your content goes here.");
+        driver.switchTo().defaultContent();
+        driver.findElement(By.cssSelector("button[title='Align center']")).click();
+        driver.navigate().back();
     }
 }
